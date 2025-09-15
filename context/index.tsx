@@ -24,12 +24,17 @@ export const modal = createAppKit({
   networks,
   metadata,
   themeMode: 'light',
-  features: {
-    analytics: true // Optional - defaults to your Cloud configuration
-  },
-  themeVariables: {
-    '--w3m-accent': '#000000',
-  }
+    enableReconnect: false,
+    features: {
+      email: false,
+      socials: false,
+      emailShowWallets: false,
+      swaps: false,
+      onramp: false,
+      receive: false,
+      send: false,
+      history: false,
+    },
 })
 
 function ContextProvider({ children, cookies }: { children: ReactNode; cookies: string | null }) {
